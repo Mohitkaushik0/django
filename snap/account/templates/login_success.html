@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #FFFC00, #ffe600);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* floating circles background */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      animation: float 6s infinite ease-in-out;
+    }
+
+    .circle:nth-child(1) {
+      width: 120px;
+      height: 120px;
+      top: 10%;
+      left: 20%;
+    }
+
+    .circle:nth-child(2) {
+      width: 200px;
+      height: 200px;
+      bottom: 10%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .circle:nth-child(3) {
+      width: 80px;
+      height: 80px;
+      top: 70%;
+      left: 10%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* main card */
+    .card {
+      position: relative;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      padding: 50px 40px;
+      border-radius: 25px;
+      text-align: center;
+      width: 380px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .success {
+      color: green;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .shayari {
+      font-style: italic;
+      color: #444;
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 28px;
+      background: black;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #333;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- background animation -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="card">
+
+  <h1>Welcome, {{ name }} 👋</h1>
+  <div class="success">✔ Login Successful</div>
+
+  <div class="shayari">
+    "Every new login is a fresh start,<br>
+    A new journey, a stronger heart.<br>
+    Keep shining, keep moving ahead,<br>
+    Your success is closer than you think."
+  </div>
+
+  <a href="/dashboard/" class="btn">Go to Dashboard</a>
+
+</div>
+
+</body>
+</html>

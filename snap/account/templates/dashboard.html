@@ -1,0 +1,16 @@
+<h2>Users Data (Max 20)</h2>
+
+<table border="1">
+<tr>
+<th>Username</th>
+<th>Email</th>
+</tr>
+
+{% for user in users %}
+<tr>
+<td>{{ user.username }}</td>
+<td>{{ user.email }}</td>
+</tr>
+{% endfor %}
+
+</table>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Success</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #FFFC00, #ffe600);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      color: green;
+      font-size: 30px;
+    }
+
+    p {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: black;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background: #333;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .emoji {
+      font-size: 50px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="emoji">🎉</div>
+  <h1>Congratulations!</h1>
+  <p>Your account has been created successfully.</p>
+
+  <a href="/login/">Go to Login</a>
+</div>
+
+</body>
+</html>
